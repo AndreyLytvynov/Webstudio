@@ -1,18 +1,42 @@
 /* Футер */
 .footer {
+  @include max-width-1199() {
+    text-align: center;
+  }
+
   /* margin: 0 auto; */
   padding: 60px 0;
   background-color: var(--bgc-footer);
 }
 .footer__container {
-  display: flex;
+  @include min-width-768() {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include max-width-1199() {
+    justify-content: center;
+  }
 }
 .footer__box {
-  margin-right: 70px;
+  padding-bottom: 60px;
+  @include min-width-768() {
+    margin-right: 168px;
+  }
+  @include min-width-1200() {
+    margin-right: 70px;
+  }
+}
+
+.footer__address {
+  margin-top: 20px;
 }
 
 .footer__media-box {
-  padding-top: 15px;
+  @include min-width-1200() {
+    padding-top: 15px;
+  }
+  padding-bottom: 60px;
 }
 
 .soc-media__link--brown {
@@ -29,11 +53,9 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
-  color: #ffffff;
-}
+  margin-bottom: 20px;
 
-.footer__contacts {
-  margin-top: 30px;
+  color: #ffffff;
 }
 
 .footer__contacts > *:not(:last-child) {
@@ -49,7 +71,6 @@
   &--home {
     color: var(--white-text-color);
   }
-
   &:hover {
     color: var(--accent-color);
   }
@@ -60,7 +81,9 @@
 
 .footer__form {
   padding-top: 15px;
-  margin-left: 93px;
+  @include min-width-1200() {
+    margin-left: 93px;
+  }
 }
 .form-footer__title {
   font-size: 14px;
@@ -68,16 +91,27 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-text-color);
+  // @include max-width-1199() {
+  //   margin-bottom: 20px;
+  // }
   margin-bottom: 20px;
 }
 
+.form-footer__holder {
+  @include min-width-1200() {
+    display: flex;
+    max-width: 450px;
+  }
+}
+
 .form-footer__button {
-  padding: 10px 28px;
   display: flex;
   align-items: center;
   cursor: pointer;
   margin: 0 auto;
-  /* margin-top: 30px; */
+  @include max-width-767() {
+    margin-top: 20px;
+  }
   background-color: var(--accent-color);
   padding: 10px 28px;
   font-weight: 700;
@@ -86,20 +120,26 @@
   letter-spacing: 0.06em;
   color: var(--white-text-color);
 }
+
 .button__icon {
   margin-left: 10px;
   fill: var(--white-text-color);
 }
 
-.form-footer__holder {
-  display: flex;
-}
-
 .form-footer__input {
+  width: 100%;
   padding: 15px 0;
   padding-left: 16px;
-  width: 358px;
-  margin-right: 12px;
+  @include min-width-480() {
+    width: 450px;
+  }
+  @include min-width-1200() {
+    width: 358px;
+    margin-right: 12px;
+  }
+  @include max-width-1199() {
+    margin-bottom: 20px;
+  }
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));

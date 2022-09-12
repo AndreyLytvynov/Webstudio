@@ -1,15 +1,33 @@
 /* Страница portfolio */
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include min-width-1200() {
+    padding: 94px 0;
+  }
 }
 
 .btn-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  gap: 8px;
+  @include max-width-767() {
+    max-width: 350px;
+  }
+
+  @include min-width-768() {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @include min-width-1200() {
+    margin-bottom: 48px;
+  }
 }
+
 .btn-list__item:not(:last-child) {
-  margin-right: 8px;
+  @include min-width-768() {
+    margin-right: 8px;
+  }
 }
 
 .button__filter {
@@ -36,17 +54,35 @@
 }
 
 .portfolio__projects {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  align-items: stretch;
+  @include min-width-768() {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .projects-list__item {
-  width: 370px;
-  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include max-width-767() {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include min-width-768() {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include min-width-1200() {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .projects-list__box {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
@@ -67,7 +103,9 @@
   color: var(--paragraph-text-color);
 }
 .projects-list__link {
-  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   &:focus,
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -85,6 +123,7 @@
   overflow: hidden;
 }
 .projects-list__overlay {
+  height: 100%;
   position: absolute;
   padding: 63px 24px;
   top: 100%;

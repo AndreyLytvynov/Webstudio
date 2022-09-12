@@ -43,11 +43,25 @@ body {
   color: var(--title-text-color);
   background-color: var(--white-text-color);
   font-family: 'Roboto', sans-serif;
+  &.mob-menu-open {
+    overflow: hidden;
+  }
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 /* Контейнер */
 .container {
-  max-width: 1200px;
+  max-width: 480px;
+  @include min-width-768() {
+    max-width: 768px;
+  }
+  @include min-width-1200() {
+    max-width: 1200px;
+  }
+
+  // max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -56,10 +70,16 @@ body {
   border: none;
   border-radius: 4px;
   text-align: center;
+  background-color: white;
 }
 
 /* Заголовки секций h2*/
 .section-header {
+  margin-bottom: 30px;
+  @include min-width-1200() {
+    margin-bottom: 50px;
+  }
+
   font-size: 36px;
   line-height: 1.16;
   text-align: center;

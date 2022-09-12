@@ -41,6 +41,41 @@
             </svg>
             +38 096 111 11 11</a></li>
       </ul>
+
+
+      <button data-menu-button class="header__burger-btn button burger-btn" aria-expanded="false" aria-controls=""
+        type="button">
+        <svg class="burger-btn__icon" width="40" height="40">
+          <use class="burger-btn__burger-icon" href="./images/symbol-defs.svg#icon-burger"></use>
+          <use class="burger-btn__close-icon" href="./images/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <div class="header__mob-menu" data-menu id="mob-menu-container">
+        <nav class="mob-menu__navigation">
+          <ul class="mob-menu__list">
+            <li class="mob-menu__item"><a class="mob-menu__link" href="./index.html">Студія</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link--current" href="">Портфоліо</a></li>
+            <li class="mob-menu__item"><a class="mob-menu__link" href="">Контакти</a></li>
+          </ul>
+        </nav>
+        <div class="mob-menu__box">
+          <ul class="mob-menu__contacts contacts">
+            <li>
+              <a class="contacts__link" href="mailto:info@devstudio.com">
+                info@devstudio.com</a>
+            </li>
+            <li><a class="contacts__link" href="tel:+380961111111">
+                +38 096 111 11 11</a></li>
+          </ul>
+          <ul class="mob-menu__soc-media">
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Twitter</a></li>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </header>
   <!-- Основной контент сайта -->
@@ -51,9 +86,10 @@
         <ul class="portfolio__btn-list btn-list">
           <li class="btn-list__item"><button type="button" class="button button__filter">Все</button></li>
           <li class="btn-list__item"><button type="button" class="button button__filter">Веб-сайти</button></li>
-          <li class="btn-list__item"><button type="button" class="button button__filter">Додатки</button></li>
+          <li class="btn-list__item asdasdas"><button type="button" class="button button__filter">Додатки</button></li>
           <li class="btn-list__item"><button type="button" class="button button__filter">Дизайн</button></li>
-          <li class="btn-list__item"><button type="button" class="button button__filter">Маркетинг</button></li>
+          <li class="btn-list__item"><button type="button" class="button button__filter">Маркетинг</button>
+          </li>
         </ul>
         <ul class="portfolio__projects projects-list">
           <li class="projects-list__item">
@@ -283,7 +319,7 @@
     </div>
   </footer>
 
-
+  <script src="./js/mob-menu.js"></script>
 </body>
 
 </html>

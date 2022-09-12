@@ -1,9 +1,7 @@
 /* Блок герой */
 .hero {
   margin: 0 auto;
-  padding: 200px 0;
-  max-width: 1600px;
-
+  padding: 118px 0;
   background-color: var(--bgc-footer);
   text-align: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -11,19 +9,40 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @include max-width-767() {
+    max-width: 480px;
+  }
+  @include min-width-768() {
+    max-width: 768px;
+  }
+
+  @include min-width-1200() {
+    max-width: 1600px;
+    padding: 200px 0;
+  }
 }
 .hero__main-title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text-color);
+  @include min-width-1200() {
+    font-size: 44px;
+    line-height: 1.4;
+  }
 }
 .hero__button {
   margin-top: 30px;
-  padding: 10px 32px;
+  padding: 10px 24px;
+
+  @include min-width-1200() {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
+
 .hero__button {
   background-color: var(--accent-color);
   color: var(--white-text-color);
@@ -37,44 +56,53 @@
 
 /* Секция наши качества*/
 .qualities {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include min-width-1200() {
+    padding: 94px 0;
+  }
 }
 .qualities__list {
-  display: flex;
+  @include min-width-768() {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
-
+.qualities__item {
+  &:not(:last-child) {
+    @include max-width-767() {
+      margin-bottom: 30px;
+    }
+  }
+  @include min-width-768() {
+    width: calc((100% - 30px) / 2);
+  }
+  @include min-width-1200() {
+    width: calc((100% - 90px) / 4);
+  }
+}
 .qualities__box {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 120px;
   margin-bottom: 30px;
-
   border-radius: 4px;
   background-color: var(--bgc-teams);
 }
-
 .qualities__icon {
   height: 70px;
   width: 70px;
 }
-
-.qualities__item {
-  width: calc((100% - 90px) / 4);
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
 .qualities__sub-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
 }
 .qualities__text {
   margin-top: 10px;
-
   color: var(--paragraph-text-color);
   font-weight: normal;
   font-size: 14px;
@@ -84,13 +112,14 @@
 
 /* Секция чем мы занимаемся */
 .we-doing {
+  @include max-width-1199() {
+    display: none;
+  }
   padding-bottom: 94px;
 }
 .we-doing__list {
   display: flex;
-  margin-top: 50px;
 }
-
 .we-doing__item {
   position: relative;
   &:not(:last-child) {
@@ -104,10 +133,8 @@
   justify-content: center;
   bottom: 0;
   left: 0;
-
   width: 100%;
   height: 70px;
-
   color: #ffffff;
   background: rgba(47, 48, 58, 0.8);
   text-transform: uppercase;
@@ -120,17 +147,33 @@
 
 /* Секция наша команда */
 .our-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
+  @include min-width-1200() {
+    padding: 94px 0;
+  }
   background-color: var(--bgc-teams);
 }
 .teams {
-  margin-top: 50px;
-  display: flex;
+  @include min-width-768() {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .teams__item {
-  width: calc((100% - 90px) / 4);
+  @include min-width-768() {
+    width: calc((100% - 30px) / 2);
+  }
+  @include min-width-1200() {
+    width: calc((100% - 90px) / 4);
+  }
+
+  @include max-width-767() {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
   text-align: center;
   background: var(--white-text-color);
@@ -138,13 +181,15 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 }
 
 .teams__box {
-  padding: 30px 32px;
+  // padding: 30px 32px;
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .teams__title {
@@ -155,7 +200,7 @@
 }
 .teams__text {
   margin-top: 10px;
-
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -164,7 +209,8 @@
 
 .soc-media {
   display: flex;
-  margin-top: 16px;
+  // margin: 0 auto;
+  justify-content: center;
 }
 .soc-media__link {
   display: flex;
@@ -192,24 +238,45 @@
 
 /* Секция постоянные клиенты */
 .clients {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include min-width-1200() {
+    padding: 94px 0;
+  }
 }
 .clients__labels {
   display: flex;
-  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
-.clients__item:not(:last-child) {
-  margin-right: 30px;
+// .clients__item:not(:last-child) {
+//   margin-right: 30px;
+// }
+
+.clients__item {
+  height: 92px;
+  width: 100%;
+
+  @include min-width-480() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include min-width-768() {
+    width: 226px;
+  }
+  @include min-width-1200() {
+    width: 170px;
+  }
 }
 
 .clients__link {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 16px 0; */
-
-  height: 92px;
-  width: 170px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
