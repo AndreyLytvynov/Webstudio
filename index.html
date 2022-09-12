@@ -43,8 +43,8 @@
       </ul>
 
 
-      <button data-menu-button class="header__burger-btn button burger-btn" aria-expanded="false" aria-controls=""
-        type="button">
+      <button data-menu-button class="header__burger-btn button burger-btn" aria-expanded="false"
+        aria-controls="mob-menu-container" type="button">
         <svg class="burger-btn__icon" width="40" height="40">
           <use class="burger-btn__burger-icon" href="./images/symbol-defs.svg#icon-burger"></use>
           <use class="burger-btn__close-icon" href="./images/symbol-defs.svg#icon-close"></use>
@@ -144,15 +144,30 @@
         <h2 class="we-doing__section-header section-header">Чим ми займаємось</h2>
         <ul class="we-doing__list">
           <li class="we-doing__item">
-            <img src="./images/box-1.jpg" alt="Чоловік займається програмуванням" width="370" />
+            <picture>
+              <source srcset="./images/we-doin/img-we-doing-w350.jpg, /images/we-doin/img-we-doing-w350-@2x.jpg 2x"
+                media="(min-width: 1200px)">
+              <img src="./images/we-doin/img-we-doing-w350.jpg" alt="Чоловік займається програмуванням">
+            </picture>
+
             <p class="we-doing__text">Десктопні додатки</p>
           </li>
           <li class="we-doing__item">
-            <img src="./images/box-2.jpg" alt="Дівчина синхронізовує компьютер з телефоном" width="370" />
+
+            <picture>
+              <source srcset="./images/we-doin/img-we-doing-w350-1.jpg, /images/we-doin/img-we-doing-w350-@2x-1.jpg 2x"
+                media="(min-width: 1200px)">
+              <img src="./images/we-doin/img-we-doing-w350-1.jpg" alt="Дівчина синхронізовує компьютер з телефоном"
+                width="370" />
+            </picture>
             <p class="we-doing__text">Мобільні додатки</p>
           </li>
           <li class="we-doing__item">
-            <img src="./images/box-3.jpg" alt="Планшет з палітрою кольорів" width="370" />
+            <picture>
+              <source srcset="./images/we-doin/img-we-doing-w350-2.jpg, /images/we-doin/img-we-doing-w350-@2x-2.jpg 2x"
+                media="(min-width: 1200px)">
+              <img src="./images/we-doin/img-we-doing-w350-2.jpg" alt="Планшет з палітрою кольорів" />
+            </picture>
             <p class="we-doing__text">Дизайнерські рішення</p>
           </li>
         </ul>
@@ -165,7 +180,19 @@
         <h2 class="our-team__section-header section-header">Наша команда</h2>
         <ul class="teams">
           <li class="teams__item">
-            <img src="./images/team-card-1.jpg" alt="Фото Ігора Дем'яненко" width="270" />
+
+            <picture>
+              <source srcset="./images/team/img-team-w270.jpg, /images/team/img-team-w270-@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+              <source srcset="./images/team/img-team-w354.webp, /images/team/img-team-w354@2x.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+              <source srcset="./images/team/img-team-w354.jpg, /images/team/img-team-w354@2x.jpg 2x"
+                media="(min-width: 768px)">
+              <source srcset="./images/team/img-team-w450.jpg, /images/team/img-team-w450-@2x.jpg 2x"
+                media="(min-width: 480px)">
+              <img class="team__image" src="./images/team-card-1.jpg" alt="Фото Игоря Демьяненко">
+            </picture>
             <div class="teams__box">
               <h3 class="teams__title">Ігор Дем'яненко</h3>
               <p class="teams__text">Product Designer</p>
@@ -202,7 +229,16 @@
             </div>
           </li>
           <li class="teams__item">
-            <img src="./images/team-card-2.jpg" alt="Фото Ольги Репіної" width="270" />
+            <picture>
+              <source srcset="./images/team/img-team-w270-1.jpg, /images/team/img-team-w270-@2x-1.jpg 2x"
+                media="(min-width: 1200px)">
+              <source srcset="./images/team/img-team-w354-1.jpg, /images/team/img-team-w354@2x-1.jpg 2x"
+                media="(min-width: 768px)">
+              <source srcset="./images/team/img-team-w450-1.jpg, /images/team/img-team-w450-@2x-1.jpg 2x"
+                media="(min-width: 480px)">
+              <img class="team__image" src="./images/team-card-2.jpg" alt="Фото Ольги Репіної">
+            </picture>
+
             <div class="teams__box">
               <h3 class="teams__title">Ольга Репіна</h3>
               <p class="teams__text">Frontend Developer</p>
@@ -239,7 +275,15 @@
             </div>
           </li>
           <li class="teams__item">
-            <img src="./images/team-card-3.jpg" alt="Фото Миколи Тарасова" width="270" />
+            <picture>
+              <source srcset="./images/team/img-team-w270-2.jpg, /images/team/img-team-w270-@2x-2.jpg 2x"
+                media="(min-width: 1200px)">
+              <source srcset="./images/team/img-team-w354-2.jpg, /images/team/img-team-w354@2x-2.jpg 2x"
+                media="(min-width: 768px)">
+              <source srcset="./images/team/img-team-w450-2.jpg, /images/team/img-team-w450-@2x-2.jpg 2x"
+                media="(min-width: 480px)">
+              <img class="team__image" src="./images/team-card-3.jpg" alt="Фото Миколи Тарасова">
+            </picture>
             <div class="teams__box">
               <h3 class="teams__title">Микола Тарасов</h3>
               <p class="teams__text">Marketing</p>
@@ -276,7 +320,15 @@
             </div>
           </li>
           <li class="teams__item">
-            <img src="./images/team-card-4.jpg" alt="Фото Михаила Єрмакова" width="270" />
+            <picture>
+              <source srcset="./images/team/img-team-w270-3.jpg, /images/team/img-team-w270-@2x-3.jpg 2x"
+                media="(min-width: 1200px)" type="image/jpeg">
+              <source srcset="./images/team/img-team-w354-3.jpg, /images/team/img-team-w354@2x-3.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg">
+              <source srcset="./images/team/img-team-w450-3.jpg, /images/team/img-team-w450-@2x-3.jpg 2x"
+                media="(min-width: 480px)">
+              <img class="team__image" src="./images/team-card-4.jpg" alt="Фото Михайла Єрмакова">
+            </picture>
             <div class="teams__box">
               <h3 class="teams__title">Михайло Єрмаков</h3>
               <p class="teams__text">UI Designer</p>
@@ -407,7 +459,7 @@
       <form class="footer__form form-footer" autocomplete="off">
         <h2 class="form-footer__title">Підпишіться на розсилку</h2>
         <div class="form-footer__holder">
-          <label for="form-footer__email-lable">
+          <label for="email-footer" class="form-footer__email-lable">
             <input class="form-footer__input" type="email" name="email-footer" id="email-footer" placeholder="E-mail">
           </label>
           <button class="button form-footer__button" type="submit"><span>Підписатися</span>
@@ -473,9 +525,7 @@
           </svg>
 
         </label>
-
         <button class="button form-hero__btn-submit" type="submit">Відправити</button>
-
       </form>
       <button class="modal__btn-close" type="button" data-modal-close>
         <svg width="11" height="11">

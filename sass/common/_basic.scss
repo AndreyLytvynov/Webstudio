@@ -53,6 +53,8 @@ body {
 
 /* Контейнер */
 .container {
+  margin: 0 auto;
+  padding: 0 15px;
   max-width: 480px;
   @include min-width-768() {
     max-width: 768px;
@@ -62,8 +64,6 @@ body {
   }
 
   // max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 .button {

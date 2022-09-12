@@ -1,6 +1,5 @@
 /* Шапка */
 .header {
-  // padding: 24px 0 25px 0;
   @include min-width-768() {
     border-bottom: 1px solid #ececec;
   }
@@ -8,9 +7,12 @@
 .header__container {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 1199px) {
+    padding: 10px 15px;
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding: 22px 0;
+    padding: 22px 15px;
   }
 }
 
@@ -63,6 +65,9 @@
     line-height: 1.33;
     letter-spacing: 0.02em;
     color: #2196f3;
+    @media screen and (max-width: 479px) {
+      font-size: calc(12px + 21 * (100vw / 480));
+    }
   }
   & li {
     margin-top: 32px;
@@ -72,6 +77,9 @@
       line-height: 1.16;
       letter-spacing: 0.02em;
       color: #757575;
+      @media screen and (max-width: 479px) {
+        font-size: calc(12px + 12 * (100vw / 480));
+      }
     }
   }
 }
@@ -95,6 +103,9 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+  @media screen and (max-width: 479px) {
+    font-size: calc(5px + 7 * (100vw / 480));
+  }
 }
 
 .navigation {
@@ -104,6 +115,9 @@
 }
 
 .header__burger-btn {
+  &:hover {
+    cursor: pointer;
+  }
   margin-left: auto;
   z-index: 3;
   & + .header__mob-menu {

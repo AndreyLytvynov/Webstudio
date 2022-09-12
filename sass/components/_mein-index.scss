@@ -5,22 +5,65 @@
   background-color: var(--bgc-footer);
   text-align: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bg-hero.jpg);
+    url(../../images/bg-hero/img-bg-hero-mob.jpg);
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   @include max-width-767() {
     max-width: 480px;
   }
-  @include min-width-768() {
-    max-width: 768px;
-  }
+  // @include min-width-768() {
+  //   max-width: 768px;
+  // }
 
-  @include min-width-1200() {
-    max-width: 1600px;
-    padding: 200px 0;
+  // @include min-width-1200() {
+  //   max-width: 1600px;
+  //   padding: 200px 0;
+  // }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/bg-hero/img-bg-hero-mob@2x.jpg);
   }
 }
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/bg-hero/img-bg-hero-tablet.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/bg-hero/img-bg-hero-tablet@2x.jpg);
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding: 200px 0;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/bg-hero/Img-bg-hero-destop.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/bg-hero/Img-bg-hero-destop@2x.jpg);
+    }
+  }
+}
+
 .hero__main-title {
   font-weight: 900;
   font-size: 26px;
