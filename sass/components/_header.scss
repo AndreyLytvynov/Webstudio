@@ -16,24 +16,30 @@
 
 // Мобильное меню
 .header__mob-menu {
-  z-index: 2;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: transform 250ms linear, opacity 250ms linear 250ms;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  padding: 48px 40px;
 
-  @include max-width-767 {
-    &--is-open {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      top: 0;
-      left: 0;
-      // opacity: 1;
-      padding: 48px 40px;
-      transform: translateX(0);
-    }
+  &--is-open {
+    pointer-events: auto;
+    transform: translateX(0);
+    transition: opacity 250ms linear, transform 250ms linear 250ms;
+    opacity: 1;
+    z-index: 2;
+  }
+  @include min-width-768 {
+    display: none;
   }
 }
 
@@ -118,9 +124,7 @@
   }
   margin-left: auto;
   z-index: 3;
-  & + .header__mob-menu {
-    transform: translateX(0);
-  }
+
   & .burger-btn__close-icon {
     display: none;
   }
