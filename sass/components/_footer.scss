@@ -3,8 +3,6 @@
   @include max-width-1199() {
     text-align: center;
   }
-
-  /* margin: 0 auto; */
   padding: 60px 0;
   background-color: var(--bgc-footer);
 }
@@ -19,7 +17,6 @@
   }
 }
 .footer__box {
-  padding-bottom: 60px;
   @include min-width-768() {
     margin-right: 168px;
   }
@@ -36,7 +33,9 @@
   @include min-width-1200() {
     padding-top: 15px;
   }
-  padding-bottom: 60px;
+  @include max-width-767() {
+    margin-top: 60px;
+  }
 }
 
 .soc-media__link--brown {
@@ -80,9 +79,12 @@
 }
 
 .footer__form {
-  padding-top: 15px;
+  @include max-width-1199() {
+    margin-top: 60px;
+  }
   @include min-width-1200() {
     margin-left: 93px;
+    padding-top: 15px;
   }
 }
 .form-footer__title {

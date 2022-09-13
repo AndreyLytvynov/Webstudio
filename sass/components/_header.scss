@@ -1,8 +1,6 @@
 /* Шапка */
 .header {
-  @include min-width-768() {
-    border-bottom: 1px solid #ececec;
-  }
+  border-bottom: 1px solid #ececec;
 }
 .header__container {
   display: flex;
@@ -225,17 +223,17 @@
   @include min-width-768() {
     display: flex;
     align-items: center;
-
-    /* font-family: 'Roboto'; */
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     color: var(--paragraph-text-color);
     fill: var(--paragraph-text-color);
   }
   @include min-width-1200() {
     padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 

@@ -24,11 +24,11 @@
   }
 }
 
-.btn-list__item:not(:last-child) {
-  @include min-width-768() {
-    margin-right: 8px;
-  }
-}
+// .btn-list__item:not(:last-child) {
+//   @include min-width-768() {
+//     margin-right: 8px;
+//   }
+// }
 
 .button__filter {
   min-width: 73px;

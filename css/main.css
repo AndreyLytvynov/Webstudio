@@ -79,14 +79,15 @@ body.modal-open {
 /* Заголовки секций h2*/
 .section-header {
   margin-bottom: 30px;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
 }
 @media screen and (min-width: 1200px) {
   .section-header {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
   }
 }
 
@@ -133,10 +134,8 @@ body.modal-open {
 }
 
 /* Шапка */
-@media screen and (min-width: 768px) {
-  .header {
-    border-bottom: 1px solid #ececec;
-  }
+.header {
+  border-bottom: 1px solid #ececec;
 }
 
 .header__container {
@@ -367,10 +366,9 @@ body.modal-open {
   .contacts__link {
     display: flex;
     align-items: center;
-    /* font-family: 'Roboto'; */
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     color: var(--paragraph-text-color);
     fill: var(--paragraph-text-color);
@@ -379,6 +377,8 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .contacts__link {
     padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -528,7 +528,6 @@ body.modal-open {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .qualities__text {
@@ -734,7 +733,6 @@ body.modal-open {
 
 /* Футер */
 .footer {
-  /* margin: 0 auto; */
   padding: 60px 0;
   background-color: var(--bgc-footer);
 }
@@ -756,9 +754,6 @@ body.modal-open {
   }
 }
 
-.footer__box {
-  padding-bottom: 60px;
-}
 @media screen and (min-width: 768px) {
   .footer__box {
     margin-right: 168px;
@@ -774,12 +769,14 @@ body.modal-open {
   margin-top: 20px;
 }
 
-.footer__media-box {
-  padding-bottom: 60px;
-}
 @media screen and (min-width: 1200px) {
   .footer__media-box {
     padding-top: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__media-box {
+    margin-top: 60px;
   }
 }
 
@@ -821,12 +818,15 @@ body.modal-open {
   color: var(--accent-color);
 }
 
-.footer__form {
-  padding-top: 15px;
+@media screen and (max-width: 1199px) {
+  .footer__form {
+    margin-top: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__form {
     margin-left: 93px;
+    padding-top: 15px;
   }
 }
 
@@ -939,12 +939,6 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .btn-list {
     margin-bottom: 48px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .btn-list__item:not(:last-child) {
-    margin-right: 8px;
   }
 }
 
