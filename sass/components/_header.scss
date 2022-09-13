@@ -1,4 +1,3 @@
-/* Шапка */
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -156,7 +155,6 @@
   }
 }
 
-/*     >*:not(:last-child) - все дети кроме последнего    */
 .navigation__list > *:not(:last-child) {
   @include min-width-768() {
     margin-right: 50px;
@@ -175,11 +173,9 @@
     position: absolute;
     bottom: -1px;
     left: 0;
-
     width: 100%;
     height: 4px;
     border-radius: 2px;
-
     content: '';
     background-color: var(--accent-color);
   }
@@ -193,7 +189,6 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
-
     &:hover {
       color: var(--accent-color);
     }
@@ -217,6 +212,7 @@
     }
   }
 }
+
 .header__contacts > *:not(:last-child) {
   @include min-width-1200() {
     margin-right: 50px;
