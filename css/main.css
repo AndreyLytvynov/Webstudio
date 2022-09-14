@@ -133,7 +133,6 @@ body.modal-open {
   color: var(--white-text-color);
 }
 
-/* Шапка */
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -299,7 +298,6 @@ body.modal-open {
   }
 }
 
-/*     >*:not(:last-child) - все дети кроме последнего    */
 @media screen and (min-width: 768px) {
   .navigation__list > *:not(:last-child) {
     margin-right: 50px;
